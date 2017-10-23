@@ -39,9 +39,10 @@ def calc_group_score(table,names):
         return -1
     total = n*(n-1)
     score = score/total
-    return round(score,3)
+    final_score = round(score,3)
+    return final_score
 
-
+#creating the bar graph
 def bar_graph(table, name):
     friends = []
     scores = []
