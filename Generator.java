@@ -32,6 +32,7 @@ public class Generator {
 	
 	public static void main(String[] args) {
 		
+		//initialising the workbook 
 		XSSFWorkbook workbook = new XSSFWorkbook();		
 		XSSFSheet sheet = workbook.createSheet("Student Data");
 		
@@ -51,7 +52,7 @@ public class Generator {
     					rand.nextInt(MAX_WHATSAPPCOUNT) + 1});
         	}
         }
-          
+        int Serial = Sno;
         int rownum = 0;
         for (Object[] objArr: data)
         {
@@ -66,6 +67,7 @@ public class Generator {
                     cell.setCellValue((Integer)obj);
             }
         }
+	//protecting the filestream
         try
         {
             FileOutputStream out = new FileOutputStream(new File("Student Data.xlsx"));
