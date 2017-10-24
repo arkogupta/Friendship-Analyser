@@ -25,6 +25,7 @@ public class Generator {
 								"Garvit Aggarwal", "Gaurav Prasad", "Gurneesh Singh Anand", "Gurtej Kochar", "Harshil Yadav",
 								"Hemant Jadon", "Hitesh Kumar Mahour", "Inderpreet Singh Saggu", "Ipshita Chatterjee", "Isha",
 								"Jaskirat Singh Arora" };
+	//The constants for generation
 	private static final int MAX_CALLDUARTION = 100;
 	private static final int MAX_SMSCOUNT = 30;
 	private static final int MAX_WHATSAPPCOUNT = 200;
@@ -35,7 +36,8 @@ public class Generator {
 		//initialising the workbook 
 		XSSFWorkbook workbook = new XSSFWorkbook();		
 		XSSFSheet sheet = workbook.createSheet("Student Data");
-		
+		//for copying during I/O
+		XSSFSheet temp = sheet;
 		List<Object[]> data = new ArrayList<Object[]>();
         data.add(new Object[] {"S.No.", "Student1", "Student2", "Call Duration",
         							"FB Friend", "Mutual Friends", "SMS", "WhatsApp"});
