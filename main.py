@@ -83,7 +83,7 @@ def stack_plot(table,name):
             WhatsApp.append(row['WhatsApp'])
             SMS.append(row['SMS'])
             mutual_friends.append(row['Mutual Friends'])
-    int rot_deg=90
+    rot_deg=90
     plt.xticks(x,x_strings)
     plt.xticks(rotation= rot_deg)
     plt.plot([],[],color = 'm',label = 'Call Durations',linewidth=5)
